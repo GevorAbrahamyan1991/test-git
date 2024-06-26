@@ -1,0 +1,11 @@
+{
+  "short_name": "React",
+  "name": "React",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "40x40",
+      "type": "image/png"
+    }
+  ]
+}

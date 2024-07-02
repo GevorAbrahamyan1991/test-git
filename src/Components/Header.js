@@ -104,8 +104,8 @@ export default function Header(){
   
         </IconButton>
       </div>
-      <Collapse open={openNav} className="text-red-500">
-        <NavList className="text-black" />
+      <Collapse open={openNav} >
+        <NavList  />
       </Collapse>
     </Navbar>
   );

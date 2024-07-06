@@ -12,6 +12,9 @@ module.exports = withMT({
         "font-Header":[
           "Roboto", "sans-serif"
         ],
+        cardnn:[
+          "Roboto Slab", "serif"
+        ]
       }
     },
   },

@@ -76,7 +76,6 @@ export default function Header(){
     }, []);
     const content=(
         <>
-         return (
     <Navbar className="mx-auto max-w-screen-xl px-6 py-3 bg-black border-none">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
@@ -108,7 +107,7 @@ export default function Header(){
         <NavList  />
       </Collapse>
     </Navbar>
-  );
+  
         </>
     )
     return(

@@ -8,14 +8,13 @@ export default function All(){
     function filterByCategory(item) {
       return !selectedCategory || item.category === selectedCategory;
     }
-   const filteredShop = all.filter(
+   const filteredAll = all.filter(
       (item) =>
         filterByCategory(item) 
     );
   const content=(
         <>
          <div className=" ">
-        
         <select
           name=""
           id=""
@@ -32,11 +31,9 @@ export default function All(){
               )
             )}
         </select>
-        
-     
-      </div>
+        </div>
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
-           {filteredShop.map((item, index) => {
+           {filteredAll.map((item, index) => {
             return (
               <div key={index} className="flex  ">
                 <div className="h-50 w-50   ">

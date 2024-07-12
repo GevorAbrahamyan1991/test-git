@@ -3,7 +3,7 @@ import StandartContainer from "./StandartContainer";
 export default function Cardnn(){
     const content=(
         <>
-         <div className="flex ">
+         <div className="lg:flex grid md:grid-cols-1">
           <div className="w-1/2 text-white text-5xl font-cardnn py-24 p-10">
               <div>We’re Essu</div>
               <div>Creative agency</div>

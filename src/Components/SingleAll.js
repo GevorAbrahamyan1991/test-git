@@ -11,7 +11,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { CiHeart } from "react-icons/ci";
-export default function SingleShop() {
+export default function SingleAll() {
   const { id } = useParams();
   const { category } = useParams()
   const [index, setIndex] = useState(-1)

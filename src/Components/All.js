@@ -3,18 +3,17 @@ import { all } from "../Data/all";
 import StandartContainer from "./StandartContainer";
 import { useState } from "react";
 
-export default function All(){
-    const [selectedCategory, setSelectedCategory] = useState("");
-    function filterByCategory(item) {
-      return !selectedCategory || item.category === selectedCategory;
-    }
-   const filteredAll = all.filter(
-      (item) =>
-        filterByCategory(item) 
-    );
-  const content=(
-        <>
-         <div className=" ">
+export default function All() {
+  const [selectedCategory, setSelectedCategory] = useState("");
+  function filterByCategory(item) {
+    return !selectedCategory || item.category === selectedCategory;
+  }
+  const filteredAll = all.filter((item) => filterByCategory(item));
+
+  const [count, setCount] = useState(6);
+  const content = (
+    <>
+      <div className=" ">
         <select
           name=""
           id=""
@@ -31,18 +30,28 @@ export default function All(){
               )
             )}
         </select>
-        </div>
-        <div className="my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
-           {filteredAll.map((item, index) => {
-            return (
-              <div key={index} className="flex  ">
-                <div className="h-50 w-50   ">
-                    <Link to={`/single-all/${item.id}/${item.category}`}
-                    className=" text-red-500 hover:text-[#E55472] text-base ">
-                        <img src={item.cover_image} className=""/>
-                    </Link>
-                  
-               {/* <div className="bg-[#9FA4B2] text-white text-sm font-font-Header text-center absolute h-40 bottom-0 left-0 translate-y-12 group-hover:translate-y-0 transition-all duration-300">
+      </div>
+      <div className="my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredAll.slice(0, count).map((item, index) => {
+          return (
+            <div key={index} className="">
+              <Link
+                to={`/single-all/${item.id}/${item.category}`}
+                className=" text-red-500 hover:text-[#E55472] text-base "
+              >
+                <div className="h-96 relative group">
+                  <div className="absolute w-0 h-full bg-red-500 top-0 left-0 overflow-hidden group-hover:w-full transition-all duration-300 text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Sit ipsa a, omnis asperiores doloremque dolore autem ex,
+                    sint tempore provident fugit atque nesciunt? Nobis
+                    blanditiis et sapiente veritatis, accusamus praesentium.
+                  </div>
+                  <img
+                    src={item.cover_image}
+                    className="w-full h-full object-cover"
+                  />
+
+                  {/* <div className="bg-[#9FA4B2] text-white text-sm font-font-Header text-center absolute h-40 bottom-0 left-0 translate-y-12 group-hover:translate-y-0 transition-all duration-300">
                <div>
                     {item.title}
 
@@ -52,13 +61,19 @@ export default function All(){
                     
                   </div>
                </div> */}
-               </div>
+                </div>
+              </Link>
             </div>
-            );
-          })}
-           </div>
-
-        </>
-    )
-    return <StandartContainer content={content} />
+          );
+        })}
+        <button
+          className="text-white border border-white p-4 "
+          onClick={() => setCount(count + 1)}
+        >
+          Click
+        </button>
+      </div>
+    </>
+  );
+  return <StandartContainer content={content} />;
 }

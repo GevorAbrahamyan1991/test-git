@@ -13,51 +13,43 @@ export default function Blog() {
         </div>
       </div>
       <div className="">
-        <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0">
+         <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0">
           <div className="md:w-1/5">
-            {/* <div className=""> */}
             <img
-              src="https://themes.easysite.by/essu/wp-content/uploads/sites/12/2016/08/HNCK5658-720x600.jpg"
+                src="https://themes.easysite.by/essu/wp-content/uploads/sites/12/2016/08/HNCK5658-720x600.jpg"
               alt="blog1"
-            />
-            {/* </div> */}
+              />
+        
           </div>
-          <div className="md:w-4/5 text-white text-xs font-font-Header ">
+          <div className="md:w-4/5 text-white text-xs font-font-Header py-4 top-8 p-10">
             <div className="text-[#757575] font-font-Header font-bold ">
-              SEPTEMBER 1, 2016
+            SEPTEMBER 1, 2016
             </div>
             <div className="text-white font-cardnn text-2xl my-2">
-              Learn new creative skills
+            Learn new creative skills
             </div>
             <div className="my-4">
               <div className="text-base font-font-Header text-[#82868e] ">
-                His exquisite sincerity education shameless ten earnestly
-                breakfast add. So we me unknown as improve hastily
+              Increasing impression interested expression he my at. Respect invited request charmed me warrant to. Expect
               </div>
               <div className="text-base font-font-Header text-[#82868e] ">
-                sitting forming. Especially favourable compliment but thoroughly
-                unreserved saw she themselves. Sufficient
+              no pretty as do though so genius afraid cousin. Girl when of ye snug poor draw. Mistake totally of in chiefly.
               </div>
               <div className="text-base font-font-Header text-[#82868e] ">
-                impossible him may ten insensible put continuing. Oppose exeter
-                income simple few joy cousin but twenty.
-              </div>
-              <div className="text-base font-font-Header text-[#82868e] ">
-                Scale began quiet up short wrong...
+              Justice visitor him entered for. Continue delicate as unlocked entirely mr relation diverted in....
               </div>
             </div>
           </div>
         </div>
-        <div className="lg:flex grid md:grid-cols-1">
-          <div className="w-1/2">
-            <div className="w-50 h-30 ">
-              <img
+        <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0">
+          <div className="md:w-1/5">
+            <img
                 src="https://themes.easysite.by/essu/wp-content/uploads/sites/12/2016/08/room-1336497_1280-720x600.jpg"
                 alt="blog2"
               />
-            </div>
+        
           </div>
-          <div className="w-1/2 text-white text-xs font-font-Header py-4 top-8 p-10">
+          <div className="md:w-4/5 text-white text-xs font-font-Header py-4 top-8 p-10">
             <div className="text-[#757575] font-font-Header font-bold ">
               AUGUST 31, 2016
             </div>
@@ -80,16 +72,16 @@ export default function Blog() {
             </div>
           </div>
         </div>
-        <div className="lg:flex grid md:grid-cols-1">
-          <div className="w-1/2">
-            <div className="w-50 h-30">
+        <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0">
+          <div className="md:w-1/5">
+          
               <img
                 src="https://themes.easysite.by/essu/wp-content/uploads/sites/12/2016/08/girl-1561943_1280-720x600.jpg"
                 alt="blog3"
               />
-            </div>
+          
           </div>
-          <div className="w-1/2 text-white text-xs font-font-Header py-4 top-8 p-10">
+          <div className="md:w-4/5 text-white text-xs font-font-Header py-4 top-8 p-10">
             <div className="text-[#757575] font-font-Header font-bold ">
               AUGUST 31, 2016
             </div>
@@ -112,16 +104,16 @@ export default function Blog() {
             </div>
           </div>
         </div>
-        <div className="lg:flex grid md:grid-cols-1">
-          <div className="w-1/2">
-            <div className="w-50 h-30">
+        <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0">
+          <div className="md:w-1/5">
+          
               <img
                 src="https://themes.easysite.by/essu/wp-content/uploads/sites/12/2016/09/girl-1245713_1280-720x600.jpg"
                 alt="blog4"
               />
-            </div>
+            
           </div>
-          <div className="w-1/2 text-white text-xs font-font-Header py-4 top-8 p-10">
+          <div className="md:w-4/5 text-white text-xs font-font-Header py-4 top-8 p-10">
             <div className="text-[#757575] font-font-Header font-bold ">
               AUGUST 31, 2016
             </div>
@@ -144,16 +136,16 @@ export default function Blog() {
             </div>
           </div>
         </div>
-        <div className="lg:flex grid md:grid-cols-1">
-          <div className="w-1/2">
-            <div className="w-50 h-30">
+        <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0">
+          <div className="md:w-1/5">
+          
               <img
                 src="https://themes.easysite.by/essu/wp-content/uploads/sites/12/2016/09/outdoor-lamp-1595240_1280-720x600.jpg"
                 alt="blog5"
               />
-            </div>
+            
           </div>
-          <div className="w-1/2 text-white text-xs font-font-Header py-4 top-8 p-10">
+          <div className="md:w-4/5 text-white text-xs font-font-Header py-4 top-8 p-10">
             <div className="text-[#757575] font-font-Header font-bold ">
               AUGUST 31, 2016
             </div>
@@ -179,16 +171,16 @@ export default function Blog() {
             </div>
           </div>
         </div>
-        <div className="lg:flex grid md:grid-cols-1">
-          <div className="w-1/2">
-            <div className="w-50 h-30">
+        <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0">
+          <div className="md:w-1/5">
+          
               <img
                 src="https://themes.easysite.by/essu/wp-content/uploads/sites/12/2016/09/minimography_054_orig-720x600.jpg"
                 alt="blog6"
               />
-            </div>
+            
           </div>
-          <div className="w-1/2 text-white text-xs font-font-Header py-4 top-8 p-10">
+          <div className="md:w-4/5 text-white text-xs font-font-Header py-4 top-8 p-10">
             <div className="text-[#757575] font-font-Header font-bold ">
               AUGUST 25, 2016
             </div>
@@ -211,16 +203,16 @@ export default function Blog() {
             </div>
           </div>
         </div>
-        <div className="lg:flex grid md:grid-cols-1">
-          <div className="w-1/2">
-            <div className="w-50 h-30">
+        <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0">
+          <div className="md:w-1/5">
+          
               <img
                 src="https://themes.easysite.by/essu/wp-content/uploads/sites/12/2016/09/architecture-1245754_1280-720x600.jpg"
                 alt="blog7"
               />
-            </div>
+            
           </div>
-          <div className="w-1/2 text-white text-xs font-font-Header py-4 top-8 p-10">
+          <div className="md:w-4/5 text-white text-xs font-font-Header py-4 top-8 p-10">
             <div className="text-[#757575] font-font-Header font-bold ">
               AUGUST 24, 2016
             </div>

@@ -64,17 +64,20 @@ export default function SingleAll() {
           )}
         </div>
         <div className="">
-          {SingleAll.flexible == "true" && <div>Title</div>}
+          {SingleAll.flexible == "true" && <div> </div>}
+          <div className="font-bold text-white text-base font-font-Header">
+                {SingleAll.titleqq}{" "}
+              </div>
           <div className="">
-            {FilteredAll &&
+          {FilteredAll &&
               FilteredAll.map((item, index) => {
                 return (
                   <div key={index}>
                     <Link
-                      className="text-[#010101] font-font-Header text-xl"
+                      className="text-red-500 font-font-Header text-xl"
                       to={`/single-shop/${item.id}/${item.category}`}
                     >
-                      {item.category}
+                      
                     </Link>
                   </div>
                 );
@@ -85,104 +88,35 @@ export default function SingleAll() {
                 return (
                   <div
                     key={index}
-                    className="text-[#82868e] text-base font-font-Header "
+                    className="text-[#82868e] text-base font-font-Header  "
                   >
                     {item}
                   </div>
                 );
               })}
 
-            {/* <div className="text-[#82868e] text-base font-font-Header ">
-              {SingleAll.textw}
-            </div>
-            <div className="text-[#82868e] text-base font-font-Header my-4">
-              {SingleAll.texte}
-            </div>
-            <div className="text-[#82868e] text-base font-font-Header ">
-              {SingleAll.textr}
-            </div>
-            <div className="text-[#82868e] text-base font-font-Header ">
-              {SingleAll.textx}
-            </div>
-            <div className="text-[#82868e] text-base font-font-Header ">
-              {SingleAll.textm}
-            </div>
-            <div className="text-[#82868e] text-base font-font-Header ">
-              {SingleAll.textp}
-            </div> */}
-            <div className="my-4">
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.both}
+           {/* <div>
+            {
+              SingleAll && SingleAll.map((item, index) => {
+                return <div key={index} className="">
+                  {item.video}
+                </div>
+              })
+            }
+           </div> */}
+        {
+          SingleAll.info && SingleAll.info.map((item, index, ) => {
+             return<div key={index} className="flex gap-2" >
+               <div className="text-[#82868e] text-base font-bold ">
+               {item.key}
+               </div>
+              <div className="text-[#82868e] text-sm">
+              {item.valuee}
               </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.rest}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.to}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.do}
-              </div>
-            </div>
-            <div className="my-4">
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.as}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.in}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.ye}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.on}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.sir}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.so}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.get}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.all}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.be}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header ">
-                {SingleAll.not}
-              </div>
-            </div>
-
-            <div className="flex gap-2 ">
-              <div className="font-bold text-[#82868e] text-base font-font-Header">
-                {SingleAll.texta}{" "}
-              </div>
-              <div className="text-base text-[#82868e] text-base font-font-Header">
-                {SingleAll.textq}{" "}
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <div className="font-bold text-[#82868e] text-base font-font-Header">
-                {SingleAll.textl}{" "}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header">
-                {SingleAll.texto}{" "}
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <div className="font-bold text-[#82868e] text-base font-font-Header">
-                {SingleAll.texty}{" "}
-              </div>
-              <div className="text-[#82868e] text-base font-font-Header">
-                {SingleAll.texti}{" "}
-              </div>
-            </div>
-
-            <div className="relative flex gap-4 group">
+             </div>
+          })
+        }
+        <div className="relative flex gap-4 group">
               <div className="mt-4 text-[#82868e] flex items-center gap-2 border-2 bg-opacity-10 rounded-full h-10 w-18 p-2 transition-all duration-300 group-hover:opacity-0">
                 <CiShare2 className="text-white" />
                 Share
@@ -250,6 +184,8 @@ export default function SingleAll() {
           </div>
         </div>
       )}
+
+    
     </>
   );
   return <StandartContainer content={content} />;

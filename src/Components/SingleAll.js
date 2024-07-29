@@ -31,54 +31,64 @@ export default function SingleAll() {
 
   const content = (
     <>
-      <div className="grid  md:grid-cols-1 lg:grid-cols-2">
-        <div className="">
-          {SingleAll.flexible == "true" && (
-            <div className="my-4">
-              <Lightbox
-                close={() => {
-                  setIndex(-1);
-                  setOpen(false);
-                }}
-                controller={{ closeOnBackdropClick: true }}
-                index={index}
-                open={open}
-                slides={slides}
-              />
+      <div
+        className={
+          SingleAll.flexible == "true"
+            ? "grid  md:grid-cols-1 lg:grid-cols-2"
+            : ""
+        }
+      >
+        {/* <div className=""> */}
+        {SingleAll.flexible == "true" && (
+          <div className="my-4">
+            <Lightbox
+              close={() => {
+                setIndex(-1);
+                setOpen(false);
+              }}
+              controller={{ closeOnBackdropClick: true }}
+              index={index}
+              open={open}
+              slides={slides}
+            />
 
-              <div className="">
-                {slides &&
-                  slides.map((item, index) => {
-                    return (
-                      <div key={index}>
-                        <img
-                          src={item.src}
-                          alt={item.alt}
-                          onClick={() => openLightbox(index)}
-                        />
-                      </div>
-                    );
-                  })}
-              </div>
+            <div className="">
+              {slides &&
+                slides.map((item, index) => {
+                  return (
+                    <div key={index}>
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        onClick={() => openLightbox(index)}
+                      />
+                    </div>
+                  );
+                })}
             </div>
-          )}
-        </div>
-        <div className="">
-          {SingleAll.flexible == "true" && <div> </div>}
-          <div className="font-bold text-white text-base font-font-Header">
-                {SingleAll.titleqq}{" "}
-              </div>
+          </div>
+        )}
+        {/* </div> */}
+
+        {/* {SingleAll.flexible == "true" && <div> </div>} */}
+
+        <div className={SingleAll.flexible == "true" ? "w-1/2" : "w-full flex"}>
+          <div
+            className={`${
+              SingleAll.flexible == "true" ? "" : "w-1/2"
+            } font-bold text-white text-base font-font-Header`}
+          >
+            {SingleAll.titleqq}{" "}
+          </div>
           <div className="">
-          {FilteredAll &&
+            {FilteredAll &&
               FilteredAll.map((item, index) => {
                 return (
                   <div key={index}>
                     <Link
                       className="text-red-500 font-font-Header text-xl"
                       to={`/single-shop/${item.id}/${item.category}`}
-                    >
-                      
-                    </Link>
+                    ></Link>
                   </div>
                 );
               })}
@@ -95,28 +105,18 @@ export default function SingleAll() {
                 );
               })}
 
-           {/* <div>
-            {
-              SingleAll && SingleAll.map((item, index) => {
-                return <div key={index} className="">
-                  {item.video}
-                </div>
-              })
-            }
-           </div> */}
-        {
-          SingleAll.info && SingleAll.info.map((item, index, ) => {
-             return<div key={index} className="flex gap-2" >
-               <div className="text-[#82868e] text-base font-bold ">
-               {item.key}
-               </div>
-              <div className="text-[#82868e] text-sm">
-              {item.valuee}
-              </div>
-             </div>
-          })
-        }
-        <div className="relative flex gap-4 group">
+            {SingleAll.info &&
+              SingleAll.info.map((item, index) => {
+                return (
+                  <div key={index} className="flex gap-2">
+                    <div className="text-[#82868e] text-base font-bold ">
+                      {item.key}
+                    </div>
+                    <div className="text-[#82868e] text-sm">{item.valuee}</div>
+                  </div>
+                );
+              })}
+            <div className="relative flex gap-4 group">
               <div className="mt-4 text-[#82868e] flex items-center gap-2 border-2 bg-opacity-10 rounded-full h-10 w-18 p-2 transition-all duration-300 group-hover:opacity-0">
                 <CiShare2 className="text-white" />
                 Share
@@ -185,7 +185,25 @@ export default function SingleAll() {
         </div>
       )}
 
-    
+      <div className="text-wite text-2xl">.fdfkjdlk</div>
+      <div>
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          muted
+          autoPlay
+          loop
+          playsInline
+        >
+          <track
+            kind="captions"
+            src={"https://www.youtube.com/watch?v=60zhX909jmQ&t=1s"}
+            srcLang="en"
+            label="English"
+            default
+          />
+          <source src={SingleAll.video} type="video/mp4" />
+        </video>
+      </div>
     </>
   );
   return <StandartContainer content={content} />;
